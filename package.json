@@ -1,0 +1,19 @@
+{
+  "name": "progressive-images",
+  "version": "1.0.0",
+  "description": "Loading images async.",
+  "main": "progressiveImages.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siulikadrian/progressive-images.git"
+  },
+  "author": "adriansiulik <asiulik@180hb.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siulikadrian/progressive-images/issues"
+  },
+  "homepage": "https://github.com/siulikadrian/progressive-images#readme"
+}

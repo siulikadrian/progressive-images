@@ -5,7 +5,7 @@
     "adriansiulik <asiulik@180hb.com>"
   ],
   "description": "Loading images async.",
-  "main": "progressiveImages.jg",
+  "main": "progressiveImages.js",
   "dependencies": {
     "jquery": "~2.1.1",
     "lodash": "^4.17.2"
