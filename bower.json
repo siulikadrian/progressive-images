@@ -1,0 +1,21 @@
+{
+  "name": "prorgessiveImages",
+  "homepage": "https://github.com/siulikadrian/progressive-images",
+  "authors": [
+    "adriansiulik <asiulik@180hb.com>"
+  ],
+  "description": "Loading images async.",
+  "main": "progressiveImages.jg",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "^4.17.2"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
