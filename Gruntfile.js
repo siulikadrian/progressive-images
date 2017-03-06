@@ -14,8 +14,8 @@ module.exports = function (grunt) {
                         "lodash": "empty:"
                     },
                     wrap: {
-                        "startFile": "src/wrap/start.js",
-                        "endFile": "src/wrap/end.js"
+                        "startFile": "src/wrap/start",
+                        "endFile": "src/wrap/end"
                     },
                     "include": ["node_modules/almond/almond", "src/images"],
                     "exclude": ["jquery", "lodash"],
