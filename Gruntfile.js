@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             build: {
                 options: {
 
-                    optimize: 'none',
+                    optimize: 'uglify2',
                     paths: {
                         "progressiveImages": "src/images",
                         "jquery": "empty:",
