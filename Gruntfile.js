@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             build: {
                 options: {
                     name: 'images',
-                    optimize: 'uglify2',
+                    optimize: 'none',
                     wrap: {
                         startFile: 'node_modules/requirejs/require.js'
                     },

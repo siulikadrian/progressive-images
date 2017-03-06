@@ -67,7 +67,7 @@ define([
 
             if (_this.visible) return;
 
-            var isInViewport = _this.isElementInView(_this.$element);
+            var isInViewport = Utils.isElementInView(_this.$element);
 
             if (isInViewport) {
 

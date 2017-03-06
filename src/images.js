@@ -7,6 +7,9 @@
     'use strict';
 
     if (typeof define == 'function' && define.amd) {
+
+        console.log('define');
+ 
         define([
             'jquery',
             'lodash',
