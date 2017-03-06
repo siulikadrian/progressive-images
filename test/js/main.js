@@ -8,16 +8,15 @@ requirejs.config({
         progressiveImages: '../bower_components/prorgessiveImages/progressiveImages.min'
     },
     shim: {
-
-    }
+        progressiveImages: {
+            deps: ['jquery', 'lodash']
+        }
+}
 });
 
 require(['progressiveImages'], function (ProgressiveImages) {
 
-    console.log('ProgressiveImages constructor', ProgressiveImages);
-    var progressiveImages = new ProgressiveImages();
+    var progressiveImages = new ProgressiveImages(function Layout(){});
     progressiveImages.init();
-
-    console.log('instnace of progressive imahes', progressiveImages);
 
 });

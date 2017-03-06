@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/siulikadrian/progressive-images#readme",
   "dependencies": {
+    "almond": "^0.3.3",
     "grunt": "^1.0.1"
   },
   "devDependencies": {

@@ -2,32 +2,13 @@
  * Created by asiulik on 2017-03-02.
  */
 
-( function (window, factory) {
-
-    'use strict';
-
-    if (typeof define == 'function' && define.amd) {
-
-        define([
-            'jquery',
-            'lodash',
-            './config',
-            './image',
-            './utils/utils'
-        ], factory);
-    } else if (typeof module == 'object' && module.exports) {
-        module.exports = factory(
-                require('jquery'),
-                require('lodash')
-        );
-    } else {
-        window.progressiveImages = factory(
-                window.$,
-                window._
-        );
-    }
-
-}(window, function ($, _, Config, ProgressiveImage, Utils) {
+define([
+    'jquery',
+    'lodash',
+    './config',
+    './image',
+    './utils/utils'
+], function ($, _, Config, ProgressiveImage, Utils){
 
     function Images(layoutInstance) {
         this.layout = layoutInstance;
@@ -90,4 +71,5 @@
 
     return Images;
 
-}));
+});
+

@@ -6,16 +6,20 @@ module.exports = function (grunt) {
         requirejs: {
             build: {
                 options: {
-                    name: 'images',
+
                     optimize: 'none',
-                    wrap: true,
-                    cjsTranslate: true,
                     paths: {
-                        jquery: "empty:",
-                        lodash: "empty:"
+                        "progressiveImages": "src/images",
+                        "jquery": "empty:",
+                        "lodash": "empty:"
                     },
-                    baseUrl: 'src',
-                    mainConfigFile: 'src/images.js',
+                    wrap: {
+                        "startFile": "src/wrap/start.js",
+                        "endFile": "src/wrap/end.js"
+                    },
+                    "include": ["node_modules/almond/almond", "src/images"],
+                    "exclude": ["jquery", "lodash"],
+
                     out: 'progressiveImages.min.js',
                     preserveLicenseComments: false
                 }          
