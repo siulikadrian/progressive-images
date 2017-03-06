@@ -18,6 +18,8 @@
 
 body {
 
+  padding: 0; margin: 0;
+
   @include devicePixelSupport(300px, 1, 'w360');
   @include devicePixelSupport(320px, 2, 'w768');
   @include devicePixelSupport(320px, 3, 'w960');
@@ -34,8 +36,8 @@ body {
 
 .progressive__item {
 
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 800px;
   background-size: cover;
   background-repeat:no-repeat;
 
