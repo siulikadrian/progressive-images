@@ -8,9 +8,8 @@ module.exports = function (grunt) {
                 options: {
                     name: 'images',
                     optimize: 'none',
-                    wrap: {
-                        startFile: 'node_modules/requirejs/require.js'
-                    },
+                    wrap: true,
+                    cjsTranslate: true,
                     paths: {
                         jquery: "empty:",
                         lodash: "empty:"
