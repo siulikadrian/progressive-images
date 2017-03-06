@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/siulikadrian/progressive-images/issues"
   },
-  "homepage": "https://github.com/siulikadrian/progressive-images#readme"
+  "homepage": "https://github.com/siulikadrian/progressive-images#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-requirejs": "^1.0.0",
+    "requirejs": "^2.3.3"
+  }
 }
