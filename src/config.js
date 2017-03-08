@@ -16,6 +16,7 @@ define([], function () {
         config.POSTER_STRATEGY,
         config.LINK_STRATEGY
     ];
+
     config.attrNameSlug = 'progressive-image-src';
     config.positionAttrSlug = 'focus-image-config';
     config.progressiveImageVisibleClass = 'progressive__image--visible';

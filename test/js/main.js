@@ -16,7 +16,7 @@ requirejs.config({
 
 require(['progressiveImages'], function (ProgressiveImages) {
 
-    var progressiveImages = new ProgressiveImages(function Layout(){});
+    var progressiveImages = new ProgressiveImages();
     progressiveImages.init();
 
 });
