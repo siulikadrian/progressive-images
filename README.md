@@ -10,9 +10,28 @@ Bower: `bower install progressiveImages --save`
 
 ## Configuration
 
-### JS
-
 ### HTML
+
+Example progressive-image-src html attr
+
+```
+    <div
+        progressive-image-src="
+            none https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w360 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w480 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w768 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w768@2x https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w960 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w1280 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w1280@2x https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w1920 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w2560 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
+            w3840 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150
+    >
+    </div>
+
+```
 
 ### SCSS/CSS
 
