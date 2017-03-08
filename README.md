@@ -8,7 +8,34 @@ _Set different images size by current viewport width_
 
 Bower: `bower install progressiveImages --save`
 
+## Init
+
+Loading via requirejs
+
+```
+    require(['progressiveImages'], function (ProgressiveImages) {
+    });
+
+```
+
+Initialize Progressive images
+
+```
+    var progressiveImages = new ProgressiveImages(element, options);
+    progressiveImages.init();
+
+```
+
 ## Configuration
+
+## JS
+
+```
+    var options = {
+        breakpoints: ["none", "w360", "w480", "w768", "w768@2x", "w1280", "w1280@2x", "w1920", "w2560", "w3840"]
+    }
+
+```
 
 ### HTML
 
@@ -30,6 +57,24 @@ Example progressive-image-src html attr
             w3840 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150
     >
     </div>
+
+```
+
+####Available config options
+
+Defaults:
+
+```
+    {
+        requestOnVisible: true,
+        forceUpdate: false // replace source when new image path are loaded
+    }
+```
+
+Example
+
+```
+    <div progressive-image-src-config="{'requestOnVisible': false, 'forceUpdate': true}"></div>
 
 ```
 
@@ -86,23 +131,6 @@ or clean css
 
 ```
 
-## Init
-
-Loading via requirejs
-
-```
-    require(['progressiveImages'], function (ProgressiveImages) {
-    });
-
-```
-
-Initialize Progressive images
-
-```
-    var progressiveImages = new ProgressiveImages();
-    progressiveImages.init();
-
-```
 
 ## Public API
 

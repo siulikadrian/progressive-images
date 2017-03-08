@@ -10,8 +10,8 @@ define([
     './utils/utils'
 ], function ($, _, Config, ProgressiveImage, Utils){
 
-    function Images(layoutInstance) {
-        this.layout = layoutInstance;
+    function Images(options) {
+        _this.globalOptions = options;
     }
 
     Images.prototype.init = function () {
@@ -43,7 +43,7 @@ define([
             var configString = $(progressiveElement).attr('progressive-image-src-config');
             var config = configString ? JSON.parse(configString.replace(/'/g, '"')) : {};
 
-            var prorgessiveItem = new ProgressiveImage(progressiveElement, _.assign(config, {
+            var prorgessiveItem = new ProgressiveImage(progressiveElement, _.assign(_this.globalOptions, config, {
                 strategy: _this.getStrategyByTag(progressiveElement)
             }));
 
