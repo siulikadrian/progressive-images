@@ -21,17 +21,19 @@ Loading via requirejs
 Initialize Progressive images
 
 ```
-    var progressiveImages = new ProgressiveImages(element, options);
+    var progressiveImages = new ProgressiveImages(globalOptions);
     progressiveImages.init();
 
 ```
 
 ## Configuration
 
-## JS
+Available usages/strategies
+
+### JS
 
 ```
-    var options = {
+    var globalOptions = {
         breakpoints: ["none", "w360", "w480", "w768", "w768@2x", "w1280", "w1280@2x", "w1920", "w2560", "w3840"]
     }
 
@@ -130,10 +132,3 @@ or clean css
     }
 
 ```
-
-
-## Public API
-
-
-
-##Events
