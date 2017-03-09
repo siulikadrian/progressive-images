@@ -15,9 +15,17 @@ define([
 
     ProgressiveImage.prototype.options = {
 
+        /*
+        *  requestOnVisible make request when isElementInView return true value by currentBreakpoint
+        * */
         requestOnVisible: true,
-        strategy: "image",
+        /*
+        *  supported breakpoints collection
+        * */
         breakpoints: Config.breakpoints,
+        /*
+        * isElementInView should return boolean true/false
+        * */
         isElementInView: function($element){
             return Utils.isElementInView($element);
         }
