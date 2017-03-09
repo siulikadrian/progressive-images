@@ -18,15 +18,21 @@ define([
 
         var progressiveItems = this.getProgressiveItems(document);
 
+        this.destroyItems();
+
+        this.progressiveImages = [];
+
+        this.addItems(progressiveItems);
+
+    };
+
+    Images.prototype.destroyItems = function(){
+
         if (this.progressiveImages && this.progressiveImages.length) {
             this.progressiveImages.forEach(function (image) {
                 image.delete();
             })
         }
-
-        this.progressiveImages = [];
-
-        this.addItems(progressiveItems);
 
     };
 

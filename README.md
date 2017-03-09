@@ -32,10 +32,38 @@ Available usages/strategies
 
 ### JS
 
+#### Options
 ```
-    var globalOptions = {
-        breakpoints: ["none", "w360", "w480", "w768", "w768@2x", "w1280", "w1280@2x", "w1920", "w2560", "w3840"]
-    }
+{
+        /*
+         *  requestOnVisible, default true. Default value for each progressive images elements.
+         *  Make request when isElementInView return true value by currentBreakpoint.
+         * */
+
+        requestOnVisible: true,
+
+        /*
+        * forceUpdate, default false. Force replace source, src, background-image to new resource before new resource are loaded.
+        * Useful for links href attr.
+        * Can be set for every progressive images by passing this property on progressive-image-src-config
+        * */
+
+        forceUpdate: false,
+
+        /*
+         *  supported breakpoints collection. Should contain all available breakpoints. Should be defined in CSS too.
+         * */
+
+        breakpoints: Config.breakpoints,
+
+        /*
+         * isElementInView should return boolean true/false. Default return true on viewport bottom position.
+         * */
+
+        isElementInView: function($element) {
+            return true;
+        }
+}
 
 ```
 
@@ -48,15 +76,9 @@ Example progressive-image-src html attr
         progressive-image-src="
             none https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
             w360 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w480 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
             w768 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w768@2x https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w960 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
             w1280 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w1280@2x https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w1920 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w2560 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150,
-            w3840 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150
+            w1920 https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150
     >
     </div>
 
