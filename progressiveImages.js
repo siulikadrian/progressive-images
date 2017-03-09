@@ -560,9 +560,17 @@ define('src/image',[
 
     ProgressiveImage.prototype.options = {
 
+        /*
+        *  requestOnVisible make request when isElementInView return true value by currentBreakpoint
+        * */
         requestOnVisible: true,
-        strategy: "image",
+        /*
+        *  supported breakpoints collection
+        * */
         breakpoints: Config.breakpoints,
+        /*
+        * isElementInView should return boolean true/false
+        * */
         isElementInView: function($element){
             return Utils.isElementInView($element);
         }
@@ -827,15 +835,21 @@ define('src/images',[
 
         var progressiveItems = this.getProgressiveItems(document);
 
+        this.destroyItems();
+
+        this.progressiveImages = [];
+
+        this.addItems(progressiveItems);
+
+    };
+
+    Images.prototype.destroyItems = function(){
+
         if (this.progressiveImages && this.progressiveImages.length) {
             this.progressiveImages.forEach(function (image) {
                 image.delete();
             })
         }
-
-        this.progressiveImages = [];
-
-        this.addItems(progressiveItems);
 
     };
 
