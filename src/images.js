@@ -11,7 +11,7 @@ define([
 ], function ($, _, Config, ProgressiveImage, Utils){
 
     function Images(options) {
-        _this.globalOptions = options;
+        this.globalOptions = options;
     }
 
     Images.prototype.init = function () {
