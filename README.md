@@ -154,3 +154,55 @@ or clean css
     }
 
 ```
+
+##Public API
+
+### getProgressiveItems
+```
+
+progressiveImages.init();
+
+    /*
+     * @params: containerNODE eg. document.querySelector('body')
+     * Return progressiveItems in passed containerNODE
+     * */
+
+    progressiveImages.getProgressiveItems(containerNODE);
+
+```
+
+### addItems
+
+```
+
+/*
+    * @params: progressiveItems
+    * Can add progressive images programmatically
+    * */
+
+    progressiveImages.addItems(
+            progressiveImages.getProgressiveItems(containerNODE)
+    );
+
+```
+
+### checkBreak
+
+```
+/*
+    * Force checkBreakpoint for each progressive images.
+    * */
+
+    progressiveImages.checkBreak();
+
+```
+
+### destroyItems
+
+```
+/*
+    * Destroy all progressive images instances.
+    * */
+
+    progressiveImages.destroyItems();
+```
