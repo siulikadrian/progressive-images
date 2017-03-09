@@ -1,0 +1,11 @@
+{
+  "name": "preview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -o -p 9005"
+  },
+  "author": "",
+  "license": "ISC"
+}

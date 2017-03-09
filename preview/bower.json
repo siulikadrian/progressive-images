@@ -1,0 +1,21 @@
+{
+  "name": "preview",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "adriansiulik <asiulik@180hb.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/siulikadrian/progressive-images",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "prorgessiveImages": "progressiveImages#*",
+    "requirejs": "^2.3.3"
+  }
+}
