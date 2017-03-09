@@ -17,7 +17,10 @@ define([
 
         requestOnVisible: true,
         strategy: "image",
-        breakpoints: Config.breakpoints
+        breakpoints: Config.breakpoints,
+        isElementInView: function($element){
+            return Utils.isElementInView($element);
+        }
 
     };
 
@@ -67,7 +70,7 @@ define([
 
             if (_this.visible) return;
 
-            var isInViewport = Utils.isElementInView(_this.$element);
+            var isInViewport = _this.options.isElementInView(_this.$element);
 
             if (isInViewport) {
 

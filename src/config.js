@@ -6,8 +6,8 @@ define([], function () {
     var config = {};
 
     config.IMAGE_STRATEGY = 'image';
-    config.POSTER_STRATEGY = 'poster';
     config.LINK_STRATEGY = 'href';
+    config.POSTER_STRATEGY = 'poster';
     config.BACKGROUND_STRATEGY = 'background';
 
     config.avalaibleStrategy = [

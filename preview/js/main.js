@@ -6,17 +6,20 @@ requirejs.config({
         jquery: '../bower_components/jquery/dist/jquery',
         lodash: '../bower_components/lodash/dist/lodash',
         progressiveImages: '../bower_components/prorgessiveImages/progressiveImages.min'
-    },
-    shim: {
-        progressiveImages: {
-            deps: ['jquery', 'lodash']
-        }
-}
+    }
 });
 
 require(['progressiveImages'], function (ProgressiveImages) {
 
-    var progressiveImages = new ProgressiveImages();
+    var progressiveImages = new ProgressiveImages({
+
+        isElementInView: function($element) {
+            console.log('custom isElement in viewport', $element);
+            return true;
+        }
+        
+    });
+
     progressiveImages.init();
 
 });
